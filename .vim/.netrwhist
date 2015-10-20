@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/yangfengjia/project/diamond/vip_webpriviread'
+let g:netrw_dirhist_2='/home/yangfengjia/project/diamond/vip_websale'
+let g:netrw_dirhist_3='/home/yangfengjia/project/diamond/svip_test'
+let g:netrw_dirhist_4='/data/yfj/project/diamond/pay_worker2'
