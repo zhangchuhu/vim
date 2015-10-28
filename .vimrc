@@ -1,7 +1,11 @@
+
 let mapleader=","
+set t_Co=256
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Bundles
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible               " be iMproved
+filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -18,7 +22,9 @@ Bundle 'tomasr/molokai'
 Bundle 'Raimondi/delimitMate'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Pydiction'
 Plugin 'vim-scripts/CmdlineComplete'
+Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/mru.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -35,10 +41,17 @@ set nobackup
 " Use Unix as the standard file type
 set ffs=unix
 
+"color theme
 syntax enable
 syntax on
+set background=dark
+"colorscheme solarized
+colorscheme vividchalk 
+
+
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
+
 "ruler
 set ru
 
@@ -47,9 +60,6 @@ set number
 
 "line space
 set linespace=1
-
-"color theme
-colorscheme vividchalk
 
 " font setting
 "set guifont=Envy\ Code\ R\ 10
@@ -230,4 +240,14 @@ au FileType lua set comments=f:--
 
 " bufexplore
 noremap <silent> <F2> :BufExplorerVerticalSplit<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+"Python sp
+""""""""""""""""""""""""""""""""""""""""""""
+"pydiction 1.2 python auto complete
+filetype plugin on
+let g:pydiction_location = '~/.vim/bundle/Pydiction'
+"defalut g:pydiction_menu_height == 15    
+let g:pydiction_menu_height = 20 
 
